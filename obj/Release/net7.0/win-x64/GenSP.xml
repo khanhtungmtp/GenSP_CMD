@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GenSP</name>
+    </assembly>
+    <members>
+        <member name="T:GenSP.Model.Sp">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.Sp.Name">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.Sp.Schema">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>   
+        </member>
+        <member name="F:GenSP.Model.Sp.Params">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="F:GenSP.Model.Sp.Results">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="M:GenSP.Model.Sp.GetMethodDefinition">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="T:GenSP.Model.SpException">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpException.Method">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpException.FullName">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpException.Schema">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpException.StoreProcedure">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpException.Message">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="T:GenSP.Model.SpParam">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Param">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Type">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Length">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Precision">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Scale">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Order">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.isOutput">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.isNullable">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.Collation">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>    
+        </member>
+        <member name="P:GenSP.Model.SpParam.DbType">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Param">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Type">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Length">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Prec">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Scale">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Order">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_isOutput">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_isNullable">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpParam.sql_Collation">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="T:GenSP.Model.SpResultElement">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Name">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Order">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.isNullable">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Type">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Length">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Precision">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Scale">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.Collation">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Name">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Order">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_isNullable">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Type">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Length">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Precision">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Scale">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="P:GenSP.Model.SpResultElement.sql_Collation">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="T:GenSP.T4.GenSPT4">
+            <summary>
+            Class to produce the template output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4.TransformText">
+            <summary>
+            Create the template output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4.#ctor(System.Collections.Generic.List{GenSP.Model.Sp},System.String,System.String,System.String)">
+            <summary>
+            Gets or sets the name of the SpResultElement.
+            </summary>
+        </member>
+        <member name="T:GenSP.T4.GenSPT4Base">
+            <summary>
+            Base class for this transformation
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.GenerationEnvironment">
+            <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.Errors">
+            <summary>
+            The error collection for the generation process
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.indentLengths">
+            <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.CurrentIndent">
+            <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.Session">
+            <summary>
+            Current transformation session
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.Write(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.WriteLine(System.String)">
+            <summary>
+            Write text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.Write(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.WriteLine(System.String,System.Object[])">
+            <summary>
+            Write formatted text directly into the generated output
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.Error(System.String)">
+            <summary>
+            Raise an error
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.Warning(System.String)">
+            <summary>
+            Raise a warning
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.PushIndent(System.String)">
+            <summary>
+            Increase the indent
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.PopIndent">
+            <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.ClearIndent">
+            <summary>
+            Remove any indentation
+            </summary>
+        </member>
+        <member name="T:GenSP.T4.GenSPT4Base.ToStringInstanceHelper">
+            <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.ToStringInstanceHelper.FormatProvider">
+            <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+        </member>
+        <member name="M:GenSP.T4.GenSPT4Base.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+            <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+        </member>
+        <member name="P:GenSP.T4.GenSPT4Base.ToStringHelper">
+            <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+        </member>
+    </members>
+</doc>
