@@ -146,7 +146,7 @@ namespace GenSP
 
             if (ExceptionList.Count > 0)
             {
-                Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH':'mm':'ss")} DA TIM THAY EXCEPTIONS ! Vui long check o file GenSP_log.txt in '{P_OutPutPhysicalFolder}'");
+                Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH':'mm':'ss")} Da tim thay exception! Vui long check o file GenSP_log.txt in '{P_OutPutPhysicalFolder}'");
                 WriteException();
             }
 
@@ -154,7 +154,7 @@ namespace GenSP
 
         private static Command GenSPScanCommand()
         {
-            var cmd = new Command("scan", "Show a greeting to a specific person!!!");
+            var cmd = new Command("scan", "GenSP.exe conStr Namespace nameStore DBcontext folderModel locationFile fileResult!!!");
 
             cmd.AddOption(new Option<string>(new[] { "--connection", "-cnn" }, "SQL SERVER 2012+ Connection String")
             {
@@ -208,6 +208,11 @@ namespace GenSP
                    !string.IsNullOrEmpty(pf) &&
                    !string.IsNullOrEmpty(f))
                 {
+                    // Check if the output physical folder exists, and create it if it doesn't.
+                    if (!Directory.Exists(pf))
+                    {
+                        Directory.CreateDirectory(pf);
+                    }
                     if (string.IsNullOrEmpty(sch))
                     {
                         Console.WriteLine("GenSP - ERROR: Parameter Missing: schema");
@@ -268,7 +273,7 @@ namespace GenSP
             else if (type == "uniqueidentifier")
                 return "Guid" + (isNullable ? "?" : "");
             else if (type == "money" || type.Contains("float") || type.Contains("numeric") || type.Contains("decimal"))
-                return "decimal" + (isNullable ? "?" : ""); // Trả về kiểu dữ liệu decimal cho tất cả các kiểu dữ liệu số, bao gồm decimal(5,1)
+                return "decimal" + (isNullable ? "?" : ""); 
             else if (type == "text" || type.IndexOf("nvarchar") > -1 || type.IndexOf("varchar") > -1 || type.IndexOf("char") > -1)
                 return "string";
             else if (type.Contains("table type"))
@@ -282,7 +287,7 @@ namespace GenSP
             else if (type == "bit")
                 return "bool" + (isNullable ? "?" : "");
             else
-                throw new UnknownDBTypeException(type); // Ném một ngoại lệ cho các kiểu dữ liệu không xác định
+                throw new UnknownDBTypeException(type); 
         }
 
 

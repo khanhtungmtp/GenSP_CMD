@@ -1,0 +1,11 @@
+
+Lay 1 store ko co tham so
+GenSP.exe scan -cnn "Server=TUNGMTP\SQLEXPRESS;Database=MES_DEV;MultipleActiveResultSets=true;User Id=sa;Password=123;TrustServerCertificate=True" -nsp GenSP -sch PRD_GET_MPS_WORKCENTER_UA -ctx "DBcontext" -sf "Model" -pf D:\Project\GenSP\bin\Release\net7.0\win-x64\output\ -f "GenSPResult.cs"
+
+// 1 store co tham so
+GenSP.exe scan -cnn "Server=TUNGMTP\SQLEXPRESS;Database=MES_DEV;MultipleActiveResultSets=true;User Id=sa;Password=123;TrustServerCertificate=True" -nsp GenSP -sch P_Get_Each_PS_And_WorkCenter_Calling -ctx "DBcontext" -sf "Model" -pf D:\Project\GenSP\bin\Release\net7.0\win-x64\output\ -f "GenSPResult.cs"
+
+Lay all store
+GenSP.exe scan -cnn "Server=10.4.0.136;Database=MES_DEV_2;MultipleActiveResultSets=true;User Id=cimes;Password=!QAZ2wsx;TrustServerCertificate=True" -nsp GenSP -sch * -ctx "DBcontext" -sf "Model" -pf D:\Projectme\GenSP\bin\Release\net7.0\win-x64\publish\output\ -f "GenSPResult.cs"
+
+cu phap: GenSP.exe scan -cnn connectionString -nsp Namespace -sch * (sao la lay het, ko muon lay het thi ghi ten store vao) -ctx "DBcontext" -sf "thu muc Model" -pf "duong dan xuat file" -f "fileResult"
