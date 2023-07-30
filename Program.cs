@@ -1,4 +1,4 @@
-﻿using GenSP.Model;
+﻿using GenSP.Models;
 using GenSP.T4;
 using System.CommandLine;
 using System.CommandLine.NamingConventionBinder;
@@ -168,38 +168,64 @@ namespace GenSP
 
             cmd.AddOption(new Option<string>(new[] { "--namespace", "-nsp" }, "Solution namespace")
             {
-                Arity = ArgumentArity.ExactlyOne
+                Arity = ArgumentArity.ExactlyOne,
+                IsRequired = false
             });
 
             cmd.AddOption(new Option<string>(new[] { "--context", "-ctx" }, "Context from")
             {
-                Arity = ArgumentArity.ExactlyOne
+                Arity = ArgumentArity.ExactlyOne,
+                IsRequired = false
             });
 
             cmd.AddOption(new Option<string>(new[] { "--sfolder", "-sf" }, "Solution Folder (ex 'Model')")
             {
-                Arity = ArgumentArity.ExactlyOne
+                Arity = ArgumentArity.ExactlyOne,
+                IsRequired = false
             });
 
             cmd.AddOption(new Option<string>(new[] { "--pfolder", "-pf" }, @"Physical Destination Folder (ex 'C:\MySolution\Model')")
             {
-                Arity = ArgumentArity.ExactlyOne
+                Arity = ArgumentArity.ExactlyOne,
+                IsRequired = false
             });
 
             cmd.AddOption(new Option<string>(new[] { "--filename", "-f" }, @"Output Filename (ex 'GenSPContext.cs')")
             {
-                Arity = ArgumentArity.ExactlyOne
+                Arity = ArgumentArity.ExactlyOne,
+                IsRequired = false
             });
 
             cmd.Handler = CommandHandler.Create<string, string, string, string, string, string, string>((cnn, nsp, sch, ctx, sf, pf, f) =>
             {
+                if (string.IsNullOrEmpty(nsp))
+                {
+                    nsp = "API";
+                }
+                if (string.IsNullOrEmpty(ctx))
+                {
+                    ctx = "DBContext";
+                }
+                if (string.IsNullOrEmpty(sf))
+                {
+                    sf = "Models";
+                }
+                if (string.IsNullOrEmpty(pf))
+                {
+                    pf = Directory.GetCurrentDirectory();
+                }
+                if (string.IsNullOrEmpty(f))
+                {
+                    string currentTime = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    f = $"Result_{currentTime}.cs";
+                }
                 P_ConnectionString = cnn;
                 P_NameSpace = nsp;
                 P_Schema = sch;
                 P_ContextSource = ctx;
                 P_OutPutSolutionFolder = sf;
                 P_OutPutPhysicalFolder = pf;
-                P_OutPutFilename = f;
+                P_OutPutFilename = f;    
 
                 if (!string.IsNullOrEmpty(cnn) &&
                    !string.IsNullOrEmpty(nsp) &&
@@ -224,7 +250,7 @@ namespace GenSP
                     }
                     else
                     {
-                        GenSPScan(); // Will retrieve the specific stored procedure with the provided schema name
+                        GenSPScan(); // get 1 store
                     }
                 }
                 else
@@ -235,26 +261,7 @@ namespace GenSP
                     {
                         Console.WriteLine("Parameter Missing: connection");
                     }
-                    if (string.IsNullOrEmpty(nsp))
-                    {
-                        Console.WriteLine("Parameter Missing: namespace");
-                    }
-                    if (string.IsNullOrEmpty(ctx))
-                    {
-                        Console.WriteLine("Parameter Missing: context");
-                    }
-                    if (string.IsNullOrEmpty(sf))
-                    {
-                        Console.WriteLine("Parameter Missing: solution folder");
-                    }
-                    if (string.IsNullOrEmpty(pf))
-                    {
-                        Console.WriteLine("Parameter Missing: physical folder");
-                    }
-                    if (string.IsNullOrEmpty(f))
-                    {
-                        Console.WriteLine("Parameter Missing: output filename");
-                    }
+
                 }
             });
 
@@ -273,7 +280,7 @@ namespace GenSP
             else if (type == "uniqueidentifier")
                 return "Guid" + (isNullable ? "?" : "");
             else if (type == "money" || type.Contains("float") || type.Contains("numeric") || type.Contains("decimal"))
-                return "decimal" + (isNullable ? "?" : ""); 
+                return "decimal" + (isNullable ? "?" : "");
             else if (type == "text" || type.IndexOf("nvarchar") > -1 || type.IndexOf("varchar") > -1 || type.IndexOf("char") > -1)
                 return "string";
             else if (type.Contains("table type"))
@@ -287,7 +294,7 @@ namespace GenSP
             else if (type == "bit")
                 return "bool" + (isNullable ? "?" : "");
             else
-                throw new UnknownDBTypeException(type); 
+                throw new UnknownDBTypeException(type);
         }
 
 

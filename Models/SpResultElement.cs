@@ -1,16 +1,23 @@
-﻿
-namespace GenSP.Model
-{
-    /// <summary>
-    /// Gets or sets the name of the SpResultElement.
-    /// </summary>
-    public class SpParam
+﻿namespace GenSP.Models
+{/// <summary>
+ /// Gets or sets the name of the SpResultElement.
+ /// </summary>
+    public class SpResultElement
     {
 #nullable enable
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-        public string? Param { get; set; }
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the SpResultElement.
+        /// </summary>
+        public string? Order { get; set; }
+        /// <summary>
+        /// Gets or sets the name of the SpResultElement.
+        /// </summary>
+        public bool isNullable { get; set; }
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
@@ -30,29 +37,19 @@ namespace GenSP.Model
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-        public string? Order { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>
-        public bool isOutput { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>
-        public bool isNullable { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>    
         public string? Collation { get; set; }
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-#nullable disable
-        public string DbType { get; set; }
+        public string? sql_Name { get; set; }
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-#nullable enable
-        public string? sql_Param { get; set; }
+        public string? sql_Order { get; set; }
+        /// <summary>
+        /// Gets or sets the name of the SpResultElement.
+        /// </summary>
+        public string? sql_isNullable { get; set; }
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
@@ -64,7 +61,7 @@ namespace GenSP.Model
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-        public string? sql_Prec { get; set; }
+        public string? sql_Precision { get; set; }
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
@@ -72,19 +69,8 @@ namespace GenSP.Model
         /// <summary>
         /// Gets or sets the name of the SpResultElement.
         /// </summary>
-        public string? sql_Order { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>
-        public string? sql_isOutput { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>
-        public string? sql_isNullable { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the SpResultElement.
-        /// </summary>
         public string? sql_Collation { get; set; }
+
 
     }
 }
