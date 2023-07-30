@@ -1,5 +1,5 @@
 ﻿
-namespace GenSP.Model
+namespace GenSP.Models
 {
     /// <summary>
     /// Gets or sets the name of the SpResultElement.
