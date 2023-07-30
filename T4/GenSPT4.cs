@@ -35,7 +35,7 @@ namespace GenSP.T4
             
             #line default
             #line hidden
-            this.Write("(SD3) on ");
+            this.Write("(MTP) on ");
             
             #line 2 "D:\Project\GenSP\T4\GenSPT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Now));
@@ -108,8 +108,8 @@ namespace GenSP.T4
             
             #line default
             #line hidden
-            this.Write("(DBContext context)\r\n        {\r\n          _context = context;\r\n        }\r\n\r\n     " +
-                    "   public ");
+            this.Write("(DBContext context)\r\n        {\r\n           _context = context;\r\n        }\r\n\r\n    " +
+                    "    public ");
             
             #line 32 "D:\Project\GenSP\T4\GenSPT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DestinationDbContext));
@@ -125,14 +125,14 @@ namespace GenSP.T4
             #line hidden
             this.Write("> options)\r\n            : base(options)\r\n        {\r\n        }               \r\n\r\n " +
                     "       protected override void OnModelCreating(ModelBuilder modelBuilder)\r\n     " +
-                    "   {                                 \r\n");
+                    "   {                                 \r\n            // No key   \r\n");
             
-            #line 39 "D:\Project\GenSP\T4\GenSPT4.tt"
+            #line 40 "D:\Project\GenSP\T4\GenSPT4.tt"
     foreach (var sp in SpList){ if (sp.Results.Count > 0){
             
             #line default
             #line hidden
-            this.Write("            // No key   \r\n            modelBuilder.Query<");
+            this.Write("            modelBuilder.Query<");
             
             #line 41 "D:\Project\GenSP\T4\GenSPT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
@@ -148,7 +148,8 @@ namespace GenSP.T4
             #line hidden
             this.Write("            \r\n            base.OnModelCreating(modelBuilder);\r\n        }\r\n// ====" +
                     "================================start services==================================" +
-                    "==========\r\n        // xu ly ben services cach 1\r\n");
+                    "==========\r\n        // xu ly ben services cach 1 dung FromSqlRaw || ExecuteSqlRa" +
+                    "wAsync\r\n");
             
             #line 47 "D:\Project\GenSP\T4\GenSPT4.tt"
  foreach (var sp in SpList){ 
@@ -468,7 +469,8 @@ if (sp.Results.Count > 0) {
             
             #line default
             #line hidden
-            this.Write("        // xu ly ben services cach 2 \r\n");
+            this.Write("        // xu ly ben services cach 2 dung FromSqlInterpolated || ExecuteSqlInterp" +
+                    "olatedAsync\r\n");
             
             #line 84 "D:\Project\GenSP\T4\GenSPT4.tt"
  foreach (var sp in SpList){ 
@@ -755,15 +757,15 @@ if (sp.Results.Count > 0) {
             #line default
             #line hidden
             this.Write("// ====================================end services==============================" +
-                    "==============\r\n\r\n\r\n");
+                    "==============\r\n\r\n\r\n// ====================================model or Dto=========" +
+                    "===================================\r\n");
             
-            #line 125 "D:\Project\GenSP\T4\GenSPT4.tt"
+            #line 126 "D:\Project\GenSP\T4\GenSPT4.tt"
  foreach (var sp in SpList){ if (sp.Results.Count > 0){
             
             #line default
             #line hidden
-            this.Write("// ====================================model or Dto==============================" +
-                    "==============\r\n        public class ");
+            this.Write("        public class ");
             
             #line 127 "D:\Project\GenSP\T4\GenSPT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));

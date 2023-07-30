@@ -1,4 +1,4 @@
-﻿namespace GenSP.Model
+﻿namespace GenSP.Models
 {
 #nullable enable
     /// <summary>

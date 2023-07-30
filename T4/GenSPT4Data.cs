@@ -1,5 +1,5 @@
 ﻿
-using GenSP.Model;
+using GenSP.Models;
 
 namespace GenSP.T4
 {
