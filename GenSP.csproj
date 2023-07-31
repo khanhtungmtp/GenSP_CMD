@@ -54,11 +54,4 @@
     </None>
   </ItemGroup>
 
-  <PropertyGroup>
-  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-  <SelfContained>true</SelfContained>
-  <!-- ... other properties ... -->
-</PropertyGroup>
-
-
 </Project>

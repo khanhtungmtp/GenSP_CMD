@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace GenSP
+namespace GenSP.Helpers
 {
     [Serializable]
     internal class UnknownDBTypeException : Exception

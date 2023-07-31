@@ -1,4 +1,5 @@
-﻿using GenSP.Models;
+﻿using GenSP.Helpers;
+using GenSP.Models;
 using GenSP.T4;
 using System.CommandLine;
 using System.CommandLine.NamingConventionBinder;
@@ -225,7 +226,7 @@ namespace GenSP
                 P_ContextSource = ctx;
                 P_OutPutSolutionFolder = sf;
                 P_OutPutPhysicalFolder = pf;
-                P_OutPutFilename = f;    
+                P_OutPutFilename = f;
 
                 if (!string.IsNullOrEmpty(cnn) &&
                    !string.IsNullOrEmpty(nsp) &&
